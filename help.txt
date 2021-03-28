@@ -1,0 +1,3 @@
+r - program-id content
+config - upload a config
+all - all programs

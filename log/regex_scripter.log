@@ -1,0 +1,718 @@
+2020-06-10 01:27:05,797 [INFO] [root] ===================== START =====================
+2020-06-10 01:27:05,798 [INFO] [root] Webhook starting
+2020-06-10 01:27:07,947 [WARNING] [telegram.vendor.ptb_urllib3.urllib3.connectionpool] Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x000001C9715F2B38>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /bot894181680:AAFfnE7exrKBaEjjVgruKSlLcdR5WuOoRlM/getMe
+2020-06-10 01:27:10,094 [WARNING] [telegram.vendor.ptb_urllib3.urllib3.connectionpool] Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x000001C9715F2C50>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /bot894181680:AAFfnE7exrKBaEjjVgruKSlLcdR5WuOoRlM/getMe
+2020-06-10 01:27:12,208 [WARNING] [telegram.vendor.ptb_urllib3.urllib3.connectionpool] Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x000001C9715F2D30>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /bot894181680:AAFfnE7exrKBaEjjVgruKSlLcdR5WuOoRlM/getMe
+2021-03-28 19:37:53,582 [INFO] [apscheduler.scheduler] Scheduler started
+2021-03-28 19:38:04,190 [INFO] [root] ---------
+2021-03-28 19:38:04,190 [INFO] [root] FUNC start_cmd
+2021-03-28 19:38:04,190 [INFO] [root] Getting user
+2021-03-28 19:38:04,196 [ERROR] [telegram.ext.dispatcher] No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\engine\base.py", line 1705, in _execute_context
+    self.dialect.do_execute(
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\engine\default.py", line 681, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: user
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\telegram\ext\dispatcher.py", line 442, in process_update
+    handler.handle_update(update, self, check, context)
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\telegram\ext\handler.py", line 160, in handle_update
+    return self.callback(update, context)
+  File "D:\Programming\Python\for_lulz\regex_scripter_bot\handlers\_decorators.py", line 15, in wrapper
+    user = session.query(User).filter_by(user_id=update.message.from_user.id).first()
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\orm\query.py", line 2716, in first
+    return self.limit(1)._iter().first()
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\orm\query.py", line 2800, in _iter
+    result = self.session.execute(
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\orm\session.py", line 1662, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\engine\base.py", line 1520, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\sql\elements.py", line 313, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\engine\base.py", line 1389, in _execute_clauseelement
+    ret = self._execute_context(
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\engine\base.py", line 1748, in _execute_context
+    self._handle_dbapi_exception(
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\engine\base.py", line 1929, in _handle_dbapi_exception
+    util.raise_(
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\util\compat.py", line 198, in raise_
+    raise exception
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\engine\base.py", line 1705, in _execute_context
+    self.dialect.do_execute(
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\engine\default.py", line 681, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: user
+[SQL: SELECT user.id AS user_id_1, user.user_id AS user_user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.username AS user_username 
+FROM user 
+WHERE user.user_id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (210224480, 1, 0)]
+(Background on this error at: http://sqlalche.me/e/14/e3q8)
+2021-03-28 19:39:36,249 [INFO] [apscheduler.scheduler] Scheduler started
+2021-03-28 19:39:39,505 [INFO] [root] ---------
+2021-03-28 19:39:39,505 [INFO] [root] FUNC start_cmd
+2021-03-28 19:39:39,505 [INFO] [root] Getting user
+2021-03-28 19:39:39,517 [INFO] [root] New user <User None Russianboii>
+2021-03-28 19:39:39,643 [INFO] [root] Start cmd
+2021-03-28 19:52:11,486 [INFO] [apscheduler.scheduler] Scheduler started
+2021-03-28 19:52:21,340 [INFO] [root] ---------
+2021-03-28 19:52:21,341 [INFO] [root] FUNC message_handler
+2021-03-28 19:52:21,341 [INFO] [root] Getting user
+2021-03-28 19:52:21,358 [INFO] [root] Existing user <User 1 Russianboii>
+2021-03-28 19:52:21,358 [ERROR] [telegram.ext.dispatcher] No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\telegram\ext\dispatcher.py", line 442, in process_update
+    handler.handle_update(update, self, check, context)
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\telegram\ext\handler.py", line 160, in handle_update
+    return self.callback(update, context)
+  File "D:\Programming\Python\for_lulz\regex_scripter_bot\handlers\_decorators.py", line 27, in wrapper
+    if user.is_banned:
+AttributeError: 'User' object has no attribute 'is_banned'
+2021-03-28 19:52:42,743 [INFO] [apscheduler.scheduler] Scheduler started
+2021-03-28 19:52:51,659 [INFO] [root] ---------
+2021-03-28 19:52:51,659 [INFO] [root] FUNC message_handler
+2021-03-28 19:52:51,659 [INFO] [root] Getting user
+2021-03-28 19:52:51,664 [INFO] [root] Existing user <User 1 Russianboii>
+2021-03-28 19:54:51,054 [INFO] [apscheduler.scheduler] Scheduler started
+2021-03-28 19:54:54,584 [INFO] [root] ---------
+2021-03-28 19:54:54,584 [INFO] [root] FUNC message_handler
+2021-03-28 19:54:54,584 [INFO] [root] Getting user
+2021-03-28 19:54:54,589 [INFO] [root] Existing user <User 1 Russianboii>
+2021-03-28 19:54:54,589 [ERROR] [telegram.ext.dispatcher] No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\telegram\ext\dispatcher.py", line 442, in process_update
+    handler.handle_update(update, self, check, context)
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\telegram\ext\handler.py", line 160, in handle_update
+    return self.callback(update, context)
+  File "D:\Programming\Python\for_lulz\regex_scripter_bot\handlers\_decorators.py", line 39, in wrapper
+    return func(update, context, user)
+  File "D:\Programming\Python\for_lulz\regex_scripter_bot\handlers\compiler.py", line 29, in message_handler
+    for cmd in commands:
+UnboundLocalError: local variable 'commands' referenced before assignment
+2021-03-28 19:55:33,629 [INFO] [apscheduler.scheduler] Scheduler started
+2021-03-28 19:55:37,114 [INFO] [root] ---------
+2021-03-28 19:55:37,115 [INFO] [root] FUNC message_handler
+2021-03-28 19:55:37,115 [INFO] [root] Getting user
+2021-03-28 19:55:37,120 [INFO] [root] Existing user <User 1 Russianboii>
+2021-03-28 19:56:09,796 [INFO] [root] ---------
+2021-03-28 19:56:09,797 [INFO] [root] FUNC message_handler
+2021-03-28 19:56:09,797 [INFO] [root] Getting user
+2021-03-28 19:56:09,798 [INFO] [root] Existing user <User 1 Russianboii>
+2021-03-28 19:59:20,919 [INFO] [apscheduler.scheduler] Scheduler started
+2021-03-28 20:32:37,453 [INFO] [apscheduler.scheduler] Scheduler started
+2021-03-28 20:32:47,085 [INFO] [root] ---------
+2021-03-28 20:32:47,085 [INFO] [root] FUNC message_handler
+2021-03-28 20:32:47,085 [INFO] [root] Getting user
+2021-03-28 20:32:47,090 [INFO] [root] Existing user <User 1 Russianboii>
+2021-03-28 20:33:12,897 [INFO] [root] ---------
+2021-03-28 20:33:12,897 [INFO] [root] FUNC message_handler
+2021-03-28 20:33:12,898 [INFO] [root] Getting user
+2021-03-28 20:33:12,899 [INFO] [root] Existing user <User 1 Russianboii>
+2021-03-28 20:33:15,578 [INFO] [root] ---------
+2021-03-28 20:33:15,578 [INFO] [root] FUNC message_handler
+2021-03-28 20:33:15,578 [INFO] [root] Getting user
+2021-03-28 20:33:15,579 [INFO] [root] Existing user <User 1 Russianboii>
+2021-03-28 20:33:19,061 [INFO] [root] ---------
+2021-03-28 20:33:19,061 [INFO] [root] FUNC message_handler
+2021-03-28 20:33:19,061 [INFO] [root] Getting user
+2021-03-28 20:33:19,062 [INFO] [root] Existing user <User 1 Russianboii>
+2021-03-28 20:33:37,193 [INFO] [root] ---------
+2021-03-28 20:33:37,194 [INFO] [root] FUNC message_handler
+2021-03-28 20:33:37,194 [INFO] [root] Getting user
+2021-03-28 20:33:37,195 [INFO] [root] Existing user <User 1 Russianboii>
+2021-03-28 21:28:39,729 [INFO] [apscheduler.scheduler] Scheduler started
+2021-03-28 21:28:47,120 [INFO] [root] ---------
+2021-03-28 21:28:47,121 [INFO] [root] FUNC message_handler
+2021-03-28 21:28:47,121 [INFO] [root] Getting user
+2021-03-28 21:28:47,126 [ERROR] [telegram.ext.dispatcher] No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\engine\base.py", line 1705, in _execute_context
+    self.dialect.do_execute(
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\engine\default.py", line 681, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such column: user.state
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\telegram\ext\dispatcher.py", line 442, in process_update
+    handler.handle_update(update, self, check, context)
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\telegram\ext\handler.py", line 160, in handle_update
+    return self.callback(update, context)
+  File "D:\Programming\Python\for_lulz\regex_scripter_bot\handlers\_decorators.py", line 15, in wrapper
+    user = session.query(User).filter_by(user_id=update.message.from_user.id).first()
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\orm\query.py", line 2716, in first
+    return self.limit(1)._iter().first()
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\orm\query.py", line 2800, in _iter
+    result = self.session.execute(
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\orm\session.py", line 1662, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\engine\base.py", line 1520, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\sql\elements.py", line 313, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\engine\base.py", line 1389, in _execute_clauseelement
+    ret = self._execute_context(
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\engine\base.py", line 1748, in _execute_context
+    self._handle_dbapi_exception(
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\engine\base.py", line 1929, in _handle_dbapi_exception
+    util.raise_(
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\util\compat.py", line 198, in raise_
+    raise exception
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\engine\base.py", line 1705, in _execute_context
+    self.dialect.do_execute(
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\engine\default.py", line 681, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such column: user.state
+[SQL: SELECT user.id AS user_id_1, user.user_id AS user_user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.username AS user_username, user.state AS user_state 
+FROM user 
+WHERE user.user_id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (210224480, 1, 0)]
+(Background on this error at: http://sqlalche.me/e/14/e3q8)
+2021-03-28 21:29:09,353 [INFO] [apscheduler.scheduler] Scheduler started
+2021-03-28 21:29:10,905 [INFO] [root] ---------
+2021-03-28 21:29:10,906 [INFO] [root] FUNC message_handler
+2021-03-28 21:29:10,906 [INFO] [root] Getting user
+2021-03-28 21:29:10,913 [ERROR] [telegram.ext.dispatcher] No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\engine\base.py", line 1705, in _execute_context
+    self.dialect.do_execute(
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\engine\default.py", line 681, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: user
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\telegram\ext\dispatcher.py", line 442, in process_update
+    handler.handle_update(update, self, check, context)
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\telegram\ext\handler.py", line 160, in handle_update
+    return self.callback(update, context)
+  File "D:\Programming\Python\for_lulz\regex_scripter_bot\handlers\_decorators.py", line 15, in wrapper
+    user = session.query(User).filter_by(user_id=update.message.from_user.id).first()
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\orm\query.py", line 2716, in first
+    return self.limit(1)._iter().first()
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\orm\query.py", line 2800, in _iter
+    result = self.session.execute(
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\orm\session.py", line 1662, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\engine\base.py", line 1520, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\sql\elements.py", line 313, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\engine\base.py", line 1389, in _execute_clauseelement
+    ret = self._execute_context(
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\engine\base.py", line 1748, in _execute_context
+    self._handle_dbapi_exception(
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\engine\base.py", line 1929, in _handle_dbapi_exception
+    util.raise_(
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\util\compat.py", line 198, in raise_
+    raise exception
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\engine\base.py", line 1705, in _execute_context
+    self.dialect.do_execute(
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\engine\default.py", line 681, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: user
+[SQL: SELECT user.id AS user_id_1, user.user_id AS user_user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.username AS user_username, user.state AS user_state 
+FROM user 
+WHERE user.user_id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (210224480, 1, 0)]
+(Background on this error at: http://sqlalche.me/e/14/e3q8)
+2021-03-28 21:30:07,447 [INFO] [apscheduler.scheduler] Scheduler started
+2021-03-28 21:30:09,419 [INFO] [root] ---------
+2021-03-28 21:30:09,420 [INFO] [root] FUNC message_handler
+2021-03-28 21:30:09,420 [INFO] [root] Getting user
+2021-03-28 21:30:09,426 [ERROR] [telegram.ext.dispatcher] No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\engine\base.py", line 1705, in _execute_context
+    self.dialect.do_execute(
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\engine\default.py", line 681, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such column: user.state
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\telegram\ext\dispatcher.py", line 442, in process_update
+    handler.handle_update(update, self, check, context)
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\telegram\ext\handler.py", line 160, in handle_update
+    return self.callback(update, context)
+  File "D:\Programming\Python\for_lulz\regex_scripter_bot\handlers\_decorators.py", line 15, in wrapper
+    user = session.query(User).filter_by(user_id=update.message.from_user.id).first()
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\orm\query.py", line 2716, in first
+    return self.limit(1)._iter().first()
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\orm\query.py", line 2800, in _iter
+    result = self.session.execute(
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\orm\session.py", line 1662, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\engine\base.py", line 1520, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\sql\elements.py", line 313, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\engine\base.py", line 1389, in _execute_clauseelement
+    ret = self._execute_context(
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\engine\base.py", line 1748, in _execute_context
+    self._handle_dbapi_exception(
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\engine\base.py", line 1929, in _handle_dbapi_exception
+    util.raise_(
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\util\compat.py", line 198, in raise_
+    raise exception
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\engine\base.py", line 1705, in _execute_context
+    self.dialect.do_execute(
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\engine\default.py", line 681, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such column: user.state
+[SQL: SELECT user.id AS user_id_1, user.user_id AS user_user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.username AS user_username, user.state AS user_state 
+FROM user 
+WHERE user.user_id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (210224480, 1, 0)]
+(Background on this error at: http://sqlalche.me/e/14/e3q8)
+2021-03-28 21:31:21,751 [INFO] [apscheduler.scheduler] Scheduler started
+2021-03-28 21:31:25,919 [INFO] [root] ---------
+2021-03-28 21:31:25,919 [INFO] [root] FUNC message_handler
+2021-03-28 21:31:25,920 [INFO] [root] Getting user
+2021-03-28 21:31:25,926 [ERROR] [telegram.ext.dispatcher] No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\engine\base.py", line 1705, in _execute_context
+    self.dialect.do_execute(
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\engine\default.py", line 681, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: user
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\telegram\ext\dispatcher.py", line 442, in process_update
+    handler.handle_update(update, self, check, context)
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\telegram\ext\handler.py", line 160, in handle_update
+    return self.callback(update, context)
+  File "D:\Programming\Python\for_lulz\regex_scripter_bot\handlers\_decorators.py", line 15, in wrapper
+    user = session.query(User).filter_by(user_id=update.message.from_user.id).first()
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\orm\query.py", line 2716, in first
+    return self.limit(1)._iter().first()
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\orm\query.py", line 2800, in _iter
+    result = self.session.execute(
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\orm\session.py", line 1662, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\engine\base.py", line 1520, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\sql\elements.py", line 313, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\engine\base.py", line 1389, in _execute_clauseelement
+    ret = self._execute_context(
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\engine\base.py", line 1748, in _execute_context
+    self._handle_dbapi_exception(
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\engine\base.py", line 1929, in _handle_dbapi_exception
+    util.raise_(
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\util\compat.py", line 198, in raise_
+    raise exception
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\engine\base.py", line 1705, in _execute_context
+    self.dialect.do_execute(
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\engine\default.py", line 681, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: user
+[SQL: SELECT user.id AS user_id_1, user.user_id AS user_user_id, user.first_name AS user_first_name, user.last_name AS user_last_name, user.username AS user_username, user.state AS user_state 
+FROM user 
+WHERE user.user_id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (210224480, 1, 0)]
+(Background on this error at: http://sqlalche.me/e/14/e3q8)
+2021-03-28 21:32:39,648 [INFO] [apscheduler.scheduler] Scheduler started
+2021-03-28 21:32:42,256 [INFO] [root] ---------
+2021-03-28 21:32:42,257 [INFO] [root] FUNC message_handler
+2021-03-28 21:32:42,257 [INFO] [root] Getting user
+2021-03-28 21:32:42,263 [INFO] [root] New user <User None Russianboii>
+2021-03-28 21:32:42,578 [ERROR] [telegram.ext.dispatcher] No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\telegram\ext\dispatcher.py", line 442, in process_update
+    handler.handle_update(update, self, check, context)
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\telegram\ext\handler.py", line 160, in handle_update
+    return self.callback(update, context)
+  File "D:\Programming\Python\for_lulz\regex_scripter_bot\handlers\_decorators.py", line 39, in wrapper
+    return func(update, context, user)
+  File "D:\Programming\Python\for_lulz\regex_scripter_bot\handlers\main.py", line 32, in message_handler
+    context.bot.send_message(chat_id=update.effective_chat.id,
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\telegram\bot.py", line 127, in decorator
+    result = func(*args, **kwargs)
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\telegram\bot.py", line 475, in send_message
+    return self._message(  # type: ignore[return-value]
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\telegram\bot.py", line 296, in _message
+    result = self._post(endpoint, data, timeout=timeout, api_kwargs=api_kwargs)
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\telegram\bot.py", line 259, in _post
+    return self.request.post(
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\telegram\utils\request.py", line 349, in post
+    result = self._request_wrapper(
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\telegram\utils\request.py", line 272, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message text is empty
+2021-03-28 21:32:51,001 [INFO] [root] ---------
+2021-03-28 21:32:51,002 [INFO] [root] FUNC message_handler
+2021-03-28 21:32:51,002 [INFO] [root] Getting user
+2021-03-28 21:32:51,004 [INFO] [root] Existing user <User 1 Russianboii>
+2021-03-28 21:32:51,044 [ERROR] [telegram.ext.dispatcher] No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\telegram\ext\dispatcher.py", line 442, in process_update
+    handler.handle_update(update, self, check, context)
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\telegram\ext\handler.py", line 160, in handle_update
+    return self.callback(update, context)
+  File "D:\Programming\Python\for_lulz\regex_scripter_bot\handlers\_decorators.py", line 39, in wrapper
+    return func(update, context, user)
+  File "D:\Programming\Python\for_lulz\regex_scripter_bot\handlers\main.py", line 32, in message_handler
+    context.bot.send_message(chat_id=update.effective_chat.id,
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\telegram\bot.py", line 127, in decorator
+    result = func(*args, **kwargs)
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\telegram\bot.py", line 475, in send_message
+    return self._message(  # type: ignore[return-value]
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\telegram\bot.py", line 296, in _message
+    result = self._post(endpoint, data, timeout=timeout, api_kwargs=api_kwargs)
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\telegram\bot.py", line 259, in _post
+    return self.request.post(
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\telegram\utils\request.py", line 349, in post
+    result = self._request_wrapper(
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\telegram\utils\request.py", line 272, in _request_wrapper
+    raise BadRequest(message)
+telegram.error.BadRequest: Message text is empty
+2021-03-28 21:33:33,017 [INFO] [apscheduler.scheduler] Scheduler started
+2021-03-28 21:33:35,253 [INFO] [root] ---------
+2021-03-28 21:33:35,253 [INFO] [root] FUNC message_handler
+2021-03-28 21:33:35,254 [INFO] [root] Getting user
+2021-03-28 21:33:35,259 [INFO] [root] Existing user <User 1 Russianboii>
+2021-03-28 21:33:47,505 [INFO] [apscheduler.scheduler] Scheduler started
+2021-03-28 21:55:21,217 [INFO] [apscheduler.scheduler] Scheduler started
+2021-03-28 21:55:29,407 [INFO] [root] ---------
+2021-03-28 21:55:29,408 [INFO] [root] FUNC run_cmd
+2021-03-28 21:55:29,408 [INFO] [root] Getting user
+2021-03-28 21:55:29,413 [INFO] [root] Existing user <User 1 Russianboii>
+2021-03-28 22:00:28,255 [INFO] [apscheduler.scheduler] Scheduler started
+2021-03-28 22:17:25,420 [INFO] [apscheduler.scheduler] Scheduler started
+2021-03-28 22:17:33,118 [INFO] [root] ---------
+2021-03-28 22:17:33,118 [INFO] [root] FUNC message_handler
+2021-03-28 22:17:33,118 [INFO] [root] Getting user
+2021-03-28 22:17:33,123 [INFO] [root] New user <User None Russianboii>
+2021-03-28 22:17:35,398 [INFO] [root] ---------
+2021-03-28 22:17:35,398 [INFO] [root] FUNC config_cmd
+2021-03-28 22:17:35,398 [INFO] [root] Getting user
+2021-03-28 22:17:35,399 [INFO] [root] Existing user <User 1 Russianboii>
+2021-03-28 22:17:37,945 [INFO] [root] ---------
+2021-03-28 22:17:37,945 [INFO] [root] FUNC message_handler
+2021-03-28 22:17:37,945 [INFO] [root] Getting user
+2021-03-28 22:17:37,947 [INFO] [root] Existing user <User 1 Russianboii>
+2021-03-28 22:17:58,832 [INFO] [root] ---------
+2021-03-28 22:17:58,833 [INFO] [root] FUNC config_cmd
+2021-03-28 22:17:58,833 [INFO] [root] Getting user
+2021-03-28 22:17:58,834 [INFO] [root] Existing user <User 1 Russianboii>
+2021-03-28 22:18:16,473 [INFO] [apscheduler.scheduler] Scheduler started
+2021-03-28 22:18:18,510 [INFO] [root] ---------
+2021-03-28 22:18:18,510 [INFO] [root] FUNC config_cmd
+2021-03-28 22:18:18,511 [INFO] [root] Getting user
+2021-03-28 22:18:18,517 [INFO] [root] Existing user <User 1 Russianboii>
+2021-03-28 22:18:22,269 [INFO] [root] ---------
+2021-03-28 22:18:22,269 [INFO] [root] FUNC message_handler
+2021-03-28 22:18:22,270 [INFO] [root] Getting user
+2021-03-28 22:18:22,277 [INFO] [root] Existing user <User 1 Russianboii>
+2021-03-28 22:18:33,715 [INFO] [root] ---------
+2021-03-28 22:18:33,716 [INFO] [root] FUNC all_programs_cmd
+2021-03-28 22:18:33,716 [INFO] [root] Getting user
+2021-03-28 22:18:33,725 [INFO] [root] Existing user <User 1 Russianboii>
+2021-03-28 22:18:33,725 [ERROR] [telegram.ext.dispatcher] No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\sql\base.py", line 1580, in _entity_namespace_key
+    return getattr(ns, key)
+AttributeError: type object 'Program' has no attribute 'user'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\telegram\ext\dispatcher.py", line 442, in process_update
+    handler.handle_update(update, self, check, context)
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\telegram\ext\handler.py", line 160, in handle_update
+    return self.callback(update, context)
+  File "D:\Programming\Python\for_lulz\regex_scripter_bot\handlers\_decorators.py", line 39, in wrapper
+    return func(update, context, user)
+  File "D:\Programming\Python\for_lulz\regex_scripter_bot\handlers\main.py", line 74, in all_programs_cmd
+    programs = session.query(Program).filter_by(user=user).all()
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\orm\query.py", line 1742, in filter_by
+    clauses = [
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\orm\query.py", line 1743, in <listcomp>
+    _entity_namespace_key(from_entity, key) == value
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\sql\base.py", line 1582, in _entity_namespace_key
+    util.raise_(
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\sqlalchemy\util\compat.py", line 198, in raise_
+    raise exception
+sqlalchemy.exc.InvalidRequestError: Entity namespace for "command" has no property "user"
+2021-03-28 22:20:22,666 [INFO] [apscheduler.scheduler] Scheduler started
+2021-03-28 22:20:25,371 [INFO] [root] ---------
+2021-03-28 22:20:25,372 [INFO] [root] FUNC all_programs_cmd
+2021-03-28 22:20:25,372 [INFO] [root] Getting user
+2021-03-28 22:20:25,377 [INFO] [root] Existing user <User 1 Russianboii>
+2021-03-28 22:20:33,951 [INFO] [root] ---------
+2021-03-28 22:20:33,951 [INFO] [root] FUNC message_handler
+2021-03-28 22:20:33,952 [INFO] [root] Getting user
+2021-03-28 22:20:33,953 [INFO] [root] Existing user <User 1 Russianboii>
+2021-03-28 22:20:50,159 [INFO] [apscheduler.scheduler] Scheduler started
+2021-03-28 22:20:55,779 [INFO] [root] ---------
+2021-03-28 22:20:55,780 [INFO] [root] FUNC config_cmd
+2021-03-28 22:20:55,780 [INFO] [root] Getting user
+2021-03-28 22:20:55,784 [INFO] [root] Existing user <User 1 Russianboii>
+2021-03-28 22:20:58,084 [INFO] [root] ---------
+2021-03-28 22:20:58,084 [INFO] [root] FUNC message_handler
+2021-03-28 22:20:58,084 [INFO] [root] Getting user
+2021-03-28 22:20:58,091 [INFO] [root] Existing user <User 1 Russianboii>
+2021-03-28 22:20:58,235 [ERROR] [telegram.ext.dispatcher] No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\telegram\ext\dispatcher.py", line 442, in process_update
+    handler.handle_update(update, self, check, context)
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\telegram\ext\handler.py", line 160, in handle_update
+    return self.callback(update, context)
+  File "D:\Programming\Python\for_lulz\regex_scripter_bot\handlers\_decorators.py", line 39, in wrapper
+    return func(update, context, user)
+  File "D:\Programming\Python\for_lulz\regex_scripter_bot\handlers\main.py", line 48, in message_handler
+    text=f'Program "{program.name}" saved. /r {program.pk}')
+AttributeError: 'Program' object has no attribute 'pk'
+2021-03-28 22:21:36,881 [INFO] [apscheduler.scheduler] Scheduler started
+2021-03-28 22:21:46,490 [INFO] [root] ---------
+2021-03-28 22:21:46,491 [INFO] [root] FUNC config_cmd
+2021-03-28 22:21:46,491 [INFO] [root] Getting user
+2021-03-28 22:21:46,497 [INFO] [root] Existing user <User 1 Russianboii>
+2021-03-28 22:21:50,010 [INFO] [root] ---------
+2021-03-28 22:21:50,010 [INFO] [root] FUNC message_handler
+2021-03-28 22:21:50,011 [INFO] [root] Getting user
+2021-03-28 22:21:50,019 [INFO] [root] Existing user <User 1 Russianboii>
+2021-03-28 22:21:57,919 [INFO] [root] ---------
+2021-03-28 22:21:57,919 [INFO] [root] FUNC all_programs_cmd
+2021-03-28 22:21:57,919 [INFO] [root] Getting user
+2021-03-28 22:21:57,928 [INFO] [root] Existing user <User 1 Russianboii>
+2021-03-28 22:22:12,827 [INFO] [root] ---------
+2021-03-28 22:22:12,828 [INFO] [root] FUNC config_cmd
+2021-03-28 22:22:12,828 [INFO] [root] Getting user
+2021-03-28 22:22:12,829 [INFO] [root] Existing user <User 1 Russianboii>
+2021-03-28 22:22:15,512 [INFO] [root] ---------
+2021-03-28 22:22:15,512 [INFO] [root] FUNC message_handler
+2021-03-28 22:22:15,512 [INFO] [root] Getting user
+2021-03-28 22:22:15,519 [INFO] [root] Existing user <User 1 Russianboii>
+2021-03-28 22:22:20,751 [INFO] [root] ---------
+2021-03-28 22:22:20,751 [INFO] [root] FUNC all_programs_cmd
+2021-03-28 22:22:20,751 [INFO] [root] Getting user
+2021-03-28 22:22:20,759 [INFO] [root] Existing user <User 1 Russianboii>
+2021-03-28 22:23:08,889 [INFO] [apscheduler.scheduler] Scheduler started
+2021-03-28 22:23:18,455 [INFO] [root] ---------
+2021-03-28 22:23:18,455 [INFO] [root] FUNC config_cmd
+2021-03-28 22:23:18,455 [INFO] [root] Getting user
+2021-03-28 22:23:18,460 [INFO] [root] Existing user <User 1 Russianboii>
+2021-03-28 22:23:21,576 [INFO] [root] ---------
+2021-03-28 22:23:21,576 [INFO] [root] FUNC message_handler
+2021-03-28 22:23:21,577 [INFO] [root] Getting user
+2021-03-28 22:23:21,585 [INFO] [root] Existing user <User 1 Russianboii>
+2021-03-28 22:23:32,247 [INFO] [root] ---------
+2021-03-28 22:23:32,248 [INFO] [root] FUNC message_handler
+2021-03-28 22:23:32,248 [INFO] [root] Getting user
+2021-03-28 22:23:32,250 [INFO] [root] Existing user <User 1 Russianboii>
+2021-03-28 22:23:37,641 [INFO] [root] ---------
+2021-03-28 22:23:37,641 [INFO] [root] FUNC all_programs_cmd
+2021-03-28 22:23:37,642 [INFO] [root] Getting user
+2021-03-28 22:23:37,643 [INFO] [root] Existing user <User 1 Russianboii>
+2021-03-28 22:27:00,505 [INFO] [apscheduler.scheduler] Scheduler started
+2021-03-28 22:27:11,770 [INFO] [root] ---------
+2021-03-28 22:27:11,771 [INFO] [root] FUNC run_cmd
+2021-03-28 22:27:11,771 [INFO] [root] Getting user
+2021-03-28 22:27:11,777 [INFO] [root] Existing user <User 1 Russianboii>
+2021-03-28 22:27:23,621 [INFO] [root] ---------
+2021-03-28 22:27:23,621 [INFO] [root] FUNC run_cmd
+2021-03-28 22:27:23,621 [INFO] [root] Getting user
+2021-03-28 22:27:23,622 [ERROR] [telegram.ext.dispatcher] No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\telegram\ext\dispatcher.py", line 442, in process_update
+    handler.handle_update(update, self, check, context)
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\telegram\ext\handler.py", line 160, in handle_update
+    return self.callback(update, context)
+  File "D:\Programming\Python\for_lulz\regex_scripter_bot\handlers\_decorators.py", line 15, in wrapper
+    user = session.query(User).filter_by(user_id=update.message.from_user.id).first()
+AttributeError: 'NoneType' object has no attribute 'from_user'
+2021-03-28 22:27:52,680 [INFO] [root] ---------
+2021-03-28 22:27:52,681 [INFO] [root] FUNC run_cmd
+2021-03-28 22:27:52,681 [INFO] [root] Getting user
+2021-03-28 22:27:52,682 [INFO] [root] Existing user <User 1 Russianboii>
+2021-03-28 22:27:52,683 [ERROR] [telegram.ext.dispatcher] No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\telegram\ext\dispatcher.py", line 442, in process_update
+    handler.handle_update(update, self, check, context)
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\telegram\ext\handler.py", line 160, in handle_update
+    return self.callback(update, context)
+  File "D:\Programming\Python\for_lulz\regex_scripter_bot\handlers\_decorators.py", line 39, in wrapper
+    return func(update, context, user)
+  File "D:\Programming\Python\for_lulz\regex_scripter_bot\handlers\main.py", line 75, in run_cmd
+    out = iter_commands(content, commands, 0)
+  File "D:\Programming\Python\for_lulz\regex_scripter_bot\base\regex_scripter.py", line 51, in iter_commands
+    if n > len(commands) - 1:
+TypeError: object of type 'AlphabetCommand' has no len()
+2021-03-28 22:28:57,990 [INFO] [apscheduler.scheduler] Scheduler started
+2021-03-28 22:29:04,973 [INFO] [root] ---------
+2021-03-28 22:29:04,973 [INFO] [root] FUNC run_cmd
+2021-03-28 22:29:04,973 [INFO] [root] Getting user
+2021-03-28 22:29:04,979 [INFO] [root] Existing user <User 1 Russianboii>
+2021-03-28 22:29:47,868 [INFO] [root] ---------
+2021-03-28 22:29:47,869 [INFO] [root] FUNC message_handler
+2021-03-28 22:29:47,869 [INFO] [root] Getting user
+2021-03-28 22:29:47,871 [INFO] [root] Existing user <User 1 Russianboii>
+2021-03-28 22:35:15,985 [INFO] [apscheduler.scheduler] Scheduler started
+2021-03-28 22:36:39,569 [INFO] [apscheduler.scheduler] Scheduler started
+2021-03-28 22:36:44,862 [INFO] [root] ---------
+2021-03-28 22:36:44,862 [INFO] [root] FUNC message_handler
+2021-03-28 22:36:44,862 [INFO] [root] Getting user
+2021-03-28 22:36:44,868 [INFO] [root] Existing user <User 1 Russianboii>
+2021-03-28 22:36:47,862 [INFO] [root] ---------
+2021-03-28 22:36:47,862 [INFO] [root] FUNC message_handler
+2021-03-28 22:36:47,862 [INFO] [root] Getting user
+2021-03-28 22:36:47,863 [INFO] [root] Existing user <User 1 Russianboii>
+2021-03-28 22:36:52,272 [INFO] [root] ---------
+2021-03-28 22:36:52,272 [INFO] [root] FUNC message_handler
+2021-03-28 22:36:52,272 [INFO] [root] Getting user
+2021-03-28 22:36:52,273 [INFO] [root] Existing user <User 1 Russianboii>
+2021-03-28 22:37:20,667 [INFO] [apscheduler.scheduler] Scheduler started
+2021-03-28 22:37:21,738 [INFO] [root] ---------
+2021-03-28 22:37:21,739 [INFO] [root] FUNC message_handler
+2021-03-28 22:37:21,739 [INFO] [root] Getting user
+2021-03-28 22:37:21,744 [INFO] [root] Existing user <User 1 Russianboii>
+2021-03-28 22:37:22,878 [INFO] [root] ---------
+2021-03-28 22:37:22,878 [INFO] [root] FUNC message_handler
+2021-03-28 22:37:22,878 [INFO] [root] Getting user
+2021-03-28 22:37:22,880 [INFO] [root] Existing user <User 1 Russianboii>
+2021-03-28 22:37:41,035 [INFO] [apscheduler.scheduler] Scheduler started
+2021-03-28 22:37:43,473 [INFO] [root] ---------
+2021-03-28 22:37:43,474 [INFO] [root] FUNC message_handler
+2021-03-28 22:37:43,474 [INFO] [root] Getting user
+2021-03-28 22:37:43,480 [INFO] [root] Existing user <User 1 Russianboii>
+2021-03-28 22:38:01,601 [INFO] [apscheduler.scheduler] Scheduler started
+2021-03-28 22:38:06,205 [INFO] [root] ---------
+2021-03-28 22:38:06,206 [INFO] [root] FUNC message_handler
+2021-03-28 22:38:06,206 [INFO] [root] Getting user
+2021-03-28 22:38:06,212 [INFO] [root] Existing user <User 1 Russianboii>
+2021-03-28 22:38:06,212 [ERROR] [telegram.ext.dispatcher] No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\telegram\ext\dispatcher.py", line 442, in process_update
+    handler.handle_update(update, self, check, context)
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\telegram\ext\handler.py", line 160, in handle_update
+    return self.callback(update, context)
+  File "D:\Programming\Python\for_lulz\regex_scripter_bot\handlers\_decorators.py", line 39, in wrapper
+    return func(update, context, user)
+  File "D:\Programming\Python\for_lulz\regex_scripter_bot\handlers\main.py", line 34, in message_handler
+    program_id = int(text.removeprefix("using_"))
+ValueError: invalid literal for int() with base 10: 'ангорило'
+2021-03-28 22:38:32,392 [INFO] [apscheduler.scheduler] Scheduler started
+2021-03-28 22:38:39,182 [INFO] [root] ---------
+2021-03-28 22:38:39,183 [INFO] [root] FUNC message_handler
+2021-03-28 22:38:39,183 [INFO] [root] Getting user
+2021-03-28 22:38:39,189 [INFO] [root] Existing user <User 1 Russianboii>
+2021-03-28 22:38:48,740 [INFO] [root] ---------
+2021-03-28 22:38:48,741 [INFO] [root] FUNC message_handler
+2021-03-28 22:38:48,741 [INFO] [root] Getting user
+2021-03-28 22:38:48,742 [INFO] [root] Existing user <User 1 Russianboii>
+2021-03-28 22:38:52,137 [INFO] [root] ---------
+2021-03-28 22:38:52,137 [INFO] [root] FUNC all_programs_cmd
+2021-03-28 22:38:52,137 [INFO] [root] Getting user
+2021-03-28 22:38:52,138 [INFO] [root] Existing user <User 1 Russianboii>
+2021-03-28 22:40:02,813 [INFO] [root] ---------
+2021-03-28 22:40:02,813 [INFO] [root] FUNC config_cmd
+2021-03-28 22:40:02,813 [INFO] [root] Getting user
+2021-03-28 22:40:02,814 [INFO] [root] Existing user <User 1 Russianboii>
+2021-03-28 22:40:04,517 [INFO] [root] ---------
+2021-03-28 22:40:04,518 [INFO] [root] FUNC message_handler
+2021-03-28 22:40:04,518 [INFO] [root] Getting user
+2021-03-28 22:40:04,526 [INFO] [root] Existing user <User 1 Russianboii>
+2021-03-28 22:40:12,145 [INFO] [root] ---------
+2021-03-28 22:40:12,145 [INFO] [root] FUNC message_handler
+2021-03-28 22:40:12,145 [INFO] [root] Getting user
+2021-03-28 22:40:12,147 [INFO] [root] Existing user <User 1 Russianboii>
+2021-03-28 22:40:15,043 [INFO] [root] ---------
+2021-03-28 22:40:15,043 [INFO] [root] FUNC message_handler
+2021-03-28 22:40:15,043 [INFO] [root] Getting user
+2021-03-28 22:40:15,045 [INFO] [root] Existing user <User 1 Russianboii>
+2021-03-28 22:40:15,046 [ERROR] [telegram.ext.dispatcher] No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\telegram\ext\dispatcher.py", line 442, in process_update
+    handler.handle_update(update, self, check, context)
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\telegram\ext\handler.py", line 160, in handle_update
+    return self.callback(update, context)
+  File "D:\Programming\Python\for_lulz\regex_scripter_bot\handlers\_decorators.py", line 39, in wrapper
+    return func(update, context, user)
+  File "D:\Programming\Python\for_lulz\regex_scripter_bot\handlers\main.py", line 38, in message_handler
+    commands = make_command_from_string(program.commands)
+  File "D:\Programming\Python\for_lulz\regex_scripter_bot\base\regex_scripter.py", line 79, in make_command_from_string
+    decoded = [decode_part(x) for x in data.split('x')]
+  File "D:\Programming\Python\for_lulz\regex_scripter_bot\base\regex_scripter.py", line 79, in <listcomp>
+    decoded = [decode_part(x) for x in data.split('x')]
+  File "D:\Programming\Python\for_lulz\regex_scripter_bot\base\regex_scripter.py", line 74, in decode_part
+    data = int(data)
+ValueError: invalid literal for int() with base 10: '32v1919250540'
+2021-03-28 22:40:21,504 [INFO] [root] ---------
+2021-03-28 22:40:21,505 [INFO] [root] FUNC message_handler
+2021-03-28 22:40:21,505 [INFO] [root] Getting user
+2021-03-28 22:40:21,506 [INFO] [root] Existing user <User 1 Russianboii>
+2021-03-28 22:40:21,507 [ERROR] [telegram.ext.dispatcher] No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\telegram\ext\dispatcher.py", line 442, in process_update
+    handler.handle_update(update, self, check, context)
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\telegram\ext\handler.py", line 160, in handle_update
+    return self.callback(update, context)
+  File "D:\Programming\Python\for_lulz\regex_scripter_bot\handlers\_decorators.py", line 39, in wrapper
+    return func(update, context, user)
+  File "D:\Programming\Python\for_lulz\regex_scripter_bot\handlers\main.py", line 38, in message_handler
+    commands = make_command_from_string(program.commands)
+  File "D:\Programming\Python\for_lulz\regex_scripter_bot\base\regex_scripter.py", line 79, in make_command_from_string
+    decoded = [decode_part(x) for x in data.split('x')]
+  File "D:\Programming\Python\for_lulz\regex_scripter_bot\base\regex_scripter.py", line 79, in <listcomp>
+    decoded = [decode_part(x) for x in data.split('x')]
+  File "D:\Programming\Python\for_lulz\regex_scripter_bot\base\regex_scripter.py", line 74, in decode_part
+    data = int(data)
+ValueError: invalid literal for int() with base 10: '32v1919250540'
+2021-03-28 22:41:38,667 [INFO] [apscheduler.scheduler] Scheduler started
+2021-03-28 22:41:43,002 [INFO] [root] ---------
+2021-03-28 22:41:43,003 [INFO] [root] FUNC message_handler
+2021-03-28 22:41:43,003 [INFO] [root] Getting user
+2021-03-28 22:41:43,009 [INFO] [root] Existing user <User 1 Russianboii>
+2021-03-28 22:41:43,011 [ERROR] [telegram.ext.dispatcher] No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\telegram\ext\dispatcher.py", line 442, in process_update
+    handler.handle_update(update, self, check, context)
+  File "D:\Programming\Python\sharedvenv39\lib\site-packages\telegram\ext\handler.py", line 160, in handle_update
+    return self.callback(update, context)
+  File "D:\Programming\Python\for_lulz\regex_scripter_bot\handlers\_decorators.py", line 39, in wrapper
+    return func(update, context, user)
+  File "D:\Programming\Python\for_lulz\regex_scripter_bot\handlers\main.py", line 39, in message_handler
+    out = iter_commands(text, commands, 0)
+  File "D:\Programming\Python\for_lulz\regex_scripter_bot\base\regex_scripter.py", line 53, in iter_commands
+    result = commands[n].run(s)
+AttributeError: 'list' object has no attribute 'run'
+2021-03-28 22:42:24,369 [INFO] [apscheduler.scheduler] Scheduler started
+2021-03-28 22:42:34,928 [INFO] [root] ---------
+2021-03-28 22:42:34,929 [INFO] [root] FUNC message_handler
+2021-03-28 22:42:34,929 [INFO] [root] Getting user
+2021-03-28 22:42:34,935 [INFO] [root] Existing user <User 1 Russianboii>
+2021-03-28 23:04:40,676 [INFO] [apscheduler.scheduler] Scheduler started
+2021-03-28 23:04:44,183 [INFO] [root] ---------
+2021-03-28 23:04:44,183 [INFO] [root] FUNC message_handler
+2021-03-28 23:04:44,183 [INFO] [root] Getting user
+2021-03-28 23:04:44,190 [INFO] [root] Existing user <User 1 Russianboii>
+2021-03-28 23:05:57,206 [INFO] [apscheduler.scheduler] Scheduler started
+2021-03-28 23:06:00,659 [INFO] [root] ---------
+2021-03-28 23:06:00,659 [INFO] [root] FUNC message_handler
+2021-03-28 23:06:00,659 [INFO] [root] Getting user
+2021-03-28 23:06:00,666 [INFO] [root] Existing user <User 1 Russianboii>
+2021-03-28 23:06:14,098 [INFO] [apscheduler.scheduler] Scheduler started
+2021-03-28 23:06:17,107 [INFO] [root] ---------
+2021-03-28 23:06:17,107 [INFO] [root] FUNC message_handler
+2021-03-28 23:06:17,107 [INFO] [root] Getting user
+2021-03-28 23:06:17,113 [INFO] [root] Existing user <User 1 Russianboii>
+2021-03-28 23:08:01,286 [INFO] [apscheduler.scheduler] Scheduler started
+2021-03-28 23:08:04,365 [INFO] [root] ---------
+2021-03-28 23:08:04,365 [INFO] [root] FUNC message_handler
+2021-03-28 23:08:04,365 [INFO] [root] Getting user
+2021-03-28 23:08:04,373 [INFO] [root] Existing user <User 1 Russianboii>
