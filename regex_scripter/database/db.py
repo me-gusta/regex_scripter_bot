@@ -14,7 +14,7 @@ class User(Base):
     first_name = Column(String(255))
     last_name = Column(String(255))
     username = Column(String(255))
-    state = Column(String())
+    state = Column(String(), default='default')
 
     def __repr__(self):
         return f'<User {self.id} {self.username}>'
