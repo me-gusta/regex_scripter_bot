@@ -1,10 +1,9 @@
 from telegram.ext import CommandHandler, MessageHandler, Filters
 
-from database.db import session, Program
+from regex_scripter.database.db import session, Program
 from ._decorators import get_user
-from config import config
-from logger import logger
-from base.regex_scripter import read_config, commands_to_str, iter_commands, commands_from_str
+from regex_scripter.logger import logger
+from regex_scripter.base.regex_scripter import read_config, commands_to_str, iter_commands, commands_from_str
 
 
 @get_user(get_chat=False)
@@ -49,7 +48,7 @@ def message_handler(update, context, user):
     try:
         name, commands = read_config(text.encode('utf-8'))
         commands_str = commands_to_str(commands)
-    except Exception as e:
+    except AssertionError as e:
         context.bot.send_message(chat_id=update.effective_chat.id,
                                  text=', '.join(e.args))
         return

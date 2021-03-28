@@ -1,0 +1,14 @@
+2021-03-28 23:46:40,035 [INFO] [apscheduler.scheduler] Scheduler started
+2021-03-28 23:46:47,169 [INFO] [apscheduler.scheduler] Scheduler started
+2021-03-28 23:46:49,748 [INFO] [root] ---------
+2021-03-28 23:46:49,749 [INFO] [root] FUNC message_handler
+2021-03-28 23:46:49,749 [INFO] [root] Getting user
+2021-03-28 23:46:49,754 [INFO] [root] Existing user <User 1 Russianboii>
+2021-03-28 23:46:51,514 [INFO] [root] ---------
+2021-03-28 23:46:51,514 [INFO] [root] FUNC message_handler
+2021-03-28 23:46:51,514 [INFO] [root] Getting user
+2021-03-28 23:46:51,515 [INFO] [root] Existing user <User 1 Russianboii>
+2021-03-28 23:46:53,924 [INFO] [root] ---------
+2021-03-28 23:46:53,924 [INFO] [root] FUNC message_handler
+2021-03-28 23:46:53,924 [INFO] [root] Getting user
+2021-03-28 23:46:53,926 [INFO] [root] Existing user <User 1 Russianboii>

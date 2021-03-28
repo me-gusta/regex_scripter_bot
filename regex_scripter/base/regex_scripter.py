@@ -1,5 +1,5 @@
 from .commands import COMMANDS
-from logger import logger
+from regex_scripter.logger import logger
 
 
 def read_config(config: bytes):
@@ -20,14 +20,8 @@ def read_config(config: bytes):
             continue
         for command_class in COMMANDS:
             if line == command_class.cmd:
-                logger.info()
                 if cmd:
-                    try:
-                        cmd.compile()
-                    except AssertionError as e:
-                        logger.info(f'Error in line {i}: {lines[i - 1].decode("utf-8")}')
-                        logger.info(', '.join(e.args))
-                        exit()
+                    cmd.compile()
                 cmd = command_class()
                 config_commands.append(cmd)
                 command_found = True
@@ -37,12 +31,7 @@ def read_config(config: bytes):
             cmd.set_arg(line)
             logger.info(f'SET {cmd.cmd} ARG {line}')
             if i == len(lines) - 1:
-                try:
-                    cmd.compile()
-                except AssertionError as e:
-                    logger.info(f'Error in line {i}: {lines[i - 1].decode("utf-8")}')
-                    logger.info(', '.join(e.args))
-                    exit()
+                cmd.compile()
 
     return name, config_commands
 
