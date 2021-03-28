@@ -1,6 +1,6 @@
 from telegram.ext import Updater
 from config import config
-from regex_scripter.handlers.init_handlers import init_handlers
+from handlers.init_handlers import init_handlers
 import logging
 logging.basicConfig(
         format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',

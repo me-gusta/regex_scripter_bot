@@ -18,4 +18,4 @@ RUN mkdir /regex_scripter
 COPY ./regex_scripter /regex_scripter
 WORKDIR /regex_scripter
 
-CMD python3 app.py
+CMD ["python3", "app.py"]

@@ -1,9 +1,9 @@
 from telegram.ext import CommandHandler, MessageHandler, Filters
 
-from regex_scripter.database.db import session, Program
+from database.db import session, Program
 from ._decorators import get_user
-from regex_scripter.logger import logger
-from regex_scripter.base.regex_scripter import read_config, commands_to_str, iter_commands, commands_from_str
+from logger import logger
+from base.regex_scripter import read_config, commands_to_str, iter_commands, commands_from_str
 
 
 @get_user(get_chat=False)

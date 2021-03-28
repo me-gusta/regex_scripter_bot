@@ -1,5 +1,5 @@
 from .commands import COMMANDS
-from regex_scripter.logger import logger
+from logger import logger
 
 
 def read_config(config: bytes):

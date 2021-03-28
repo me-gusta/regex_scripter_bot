@@ -1,5 +1,5 @@
-from regex_scripter.database.db import session, User
-from regex_scripter.logger import logger
+from database.db import session, User
+from logger import logger
 
 
 def get_user(get_chat=False):
