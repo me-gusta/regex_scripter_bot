@@ -11,7 +11,8 @@ def start_cmd(update, context, user):
     logger.info('Start cmd')
     text = '/r _program-id_ _content_\n' \
            '/config - upload a config\n' \
-           '/all - all programs\n'
+           '/all - all scripts\n' \
+           'Available on github: https://github.com/me-gusta/regex_scripter_bot'
     context.bot.send_message(chat_id=update.effective_chat.id, text=text, parse_mode='markdown')
 
 
@@ -23,10 +24,15 @@ def message_handler(update, context, user):
         program = session.query(Program).filter_by(id=program_id).first()
         if not program:
             return
+        if program.creator_id != user.id:
+            context.bot.send_message(chat_id=update.effective_chat.id,
+                                     text=f'Sorry, that script is unavailable. See /all for your script.')
+            return
+
         user.state = f'using_{program_id}'
         session.commit()
         context.bot.send_message(chat_id=update.effective_chat.id,
-                                 text=f'Using program {program_id}: {program.name}')
+                                 text=f'Using script {program_id}: {program.name}')
         return
 
     if user.state.startswith('using_'):
@@ -58,7 +64,6 @@ def message_handler(update, context, user):
         return
 
     program = Program()
-    # pk = len(session.query(Program).all()) + 1
     session.add(program)
     if not name:
         program.name = f'Program {program.id}'
@@ -69,7 +74,7 @@ def message_handler(update, context, user):
     user.state = 'default'
     session.commit()
     context.bot.send_message(chat_id=update.effective_chat.id,
-                             text=f'Program "{program.name}" saved. /r_{program.id}')
+                             text=f'Script "{program.name}" saved. /r_{program.id}')
 
 
 @get_user()
@@ -81,7 +86,6 @@ def config_cmd(update, context, user):
     pass
 
 
-
 @get_user()
 def all_programs_cmd(update, context, user):
     programs = session.query(Program).filter_by(creator_id=user.id).all()
@@ -89,7 +93,7 @@ def all_programs_cmd(update, context, user):
     for program in programs:
         text += f'/r_{program.id} | {program.name}\n'
     if not text:
-        text = "You don't have programs"
+        text = "You don't have any script."
     context.bot.send_message(chat_id=update.effective_chat.id,
                              text=text)
 
