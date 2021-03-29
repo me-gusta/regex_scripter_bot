@@ -11,9 +11,10 @@ def start_cmd(update, context, user):
     logger.info('Start cmd')
     text = '/r _program-id_ _content_\n' \
            '/config - upload a config\n' \
-           '/all - all scripts\n' \
-           'Available on github: https://github.com/me-gusta/regex_scripter_bot'
+           '/all - all scripts\n'
     context.bot.send_message(chat_id=update.effective_chat.id, text=text, parse_mode='markdown')
+    context.bot.send_message(chat_id=update.effective_chat.id,
+                             text='Available on github: https://github.com/me-gusta/regex_scripter_bot')
 
 
 @get_user()
@@ -100,6 +101,7 @@ def all_programs_cmd(update, context, user):
 
 def init_main_handlers(dispatcher):
     dispatcher.add_handler(CommandHandler('start', start_cmd))
+    dispatcher.add_handler(CommandHandler('help', start_cmd))
     dispatcher.add_handler(CommandHandler('config', config_cmd))
     dispatcher.add_handler(CommandHandler('all', all_programs_cmd))
     dispatcher.add_handler(MessageHandler(Filters.text, message_handler))
