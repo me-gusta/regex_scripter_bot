@@ -15,4 +15,4 @@ services:
     environment:
       - TOKEN=
     depends_on:
-      - database
+      - db
