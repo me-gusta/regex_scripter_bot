@@ -52,7 +52,11 @@ y p
 input: I love python so much!
 output: I l0ve ypth0n 50 much!
 ```
-
+### Keywords
+You can use these keywords in arguments
+{SPACE} - space character
+{NONE} - empty line
+{TAB} - four spaces
 ## Example scripts
 
 #### Script for transforming text in columns into valid python dictionary
