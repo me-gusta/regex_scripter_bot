@@ -15,7 +15,7 @@ Scripting language is simple enough.
 command_1
 argument_1
 argument_2
-# comment (optional, works only if on new line)
+# comment (optional, works only on new line)
 command_2
 argument_1
 argument_2
