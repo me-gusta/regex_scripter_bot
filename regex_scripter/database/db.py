@@ -2,7 +2,7 @@ from sqlalchemy import Column, Integer, BigInteger, String, Boolean, Table, Date
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 from .engine import engine
-from sqlalchemy.exc import OperationalError
+from sqlalchemy.exc import OperationalError, ProgrammingError
 import time
 
 Base = declarative_base()
@@ -43,5 +43,5 @@ try:
     print('Waiting for SQL server')
     time.sleep(6)
     session.query(User).all()
-except OperationalError:
+except (OperationalError, ProgrammingError):
     Base.metadata.create_all(engine)
