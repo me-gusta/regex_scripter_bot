@@ -16,7 +16,7 @@ class User(Base):
     first_name = Column(String(255))
     last_name = Column(String(255))
     username = Column(String(255))
-    state = Column(String(), default='default')
+    state = Column(String(15), default='default')
 
     def __repr__(self):
         return f'<User {self.id} {self.username}>'
@@ -34,9 +34,9 @@ session = sessionmaker(bind=engine)()
 class Program(Base):
     __tablename__ = 'command'
     id = Column(Integer, primary_key=True)
-    name = Column(String())
+    name = Column(String(255))
     creator_id = Column(Integer, ForeignKey('user.id'))
-    commands = Column(String())
+    commands = Column(String(7000))
 
 
 try:
