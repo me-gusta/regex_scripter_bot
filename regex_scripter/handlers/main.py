@@ -9,9 +9,8 @@ from base.regex_scripter import read_config, commands_to_str, iter_commands, com
 @get_user(get_chat=False)
 def start_cmd(update, context, user):
     logger.info('Start cmd')
-    text = '/r _program-id_ _content_\n' \
-           '/config - upload a config\n' \
-           '/all - all scripts\n'
+    text = '/config — upload a config\n' \
+           '/all — all scripts\n'
     context.bot.send_message(chat_id=update.effective_chat.id, text=text, parse_mode='markdown')
     context.bot.send_message(chat_id=update.effective_chat.id,
                              text='Available on github: https://github.com/me-gusta/regex_scripter_bot')
@@ -49,7 +48,7 @@ def message_handler(update, context, user):
 
     if user.state != 'upload_config':
         context.bot.send_message(chat_id=update.effective_chat.id,
-                                 text=f'/config to upload a config')
+                                 text=f'/config — upload a config\n/all — all scripts')
         return
 
     try:
