@@ -2,8 +2,17 @@ version: "3.0"
 
 
 services:
+  db:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_PASSWORD=examplepassword
+      MYSQL_USER=regex
+      MYSQL_DATABASE=regex_scripter
   regex_scripter:
     build:
       context: .
     environment:
       - TOKEN=
+    depends_on:
+      - database
