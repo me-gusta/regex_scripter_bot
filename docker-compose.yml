@@ -5,10 +5,13 @@ services:
   db:
     image: mysql
     restart: always
+    ports:
+    - 3306:3306
     environment:
       - MYSQL_PASSWORD=examplepassword
       - MYSQL_USER=regex
       - MYSQL_DATABASE=regex_scripter
+      - MYSQL_ROOT_PASSWORD=examplepassword
   regex_scripter:
     build:
       context: .
