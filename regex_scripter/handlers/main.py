@@ -4,6 +4,7 @@ from database.db import session, Program
 from ._decorators import get_user
 from logger import logger
 from base.regex_scripter import read_config, commands_to_str, iter_commands, commands_from_str
+from config import config
 
 
 @get_user(get_chat=False)
@@ -23,10 +24,6 @@ def message_handler(update, context, user):
         program_id = text.removeprefix("/r_")
         program = session.query(Program).filter_by(id=program_id).first()
         if not program:
-            return
-        if program.creator_id != user.id:
-            context.bot.send_message(chat_id=update.effective_chat.id,
-                                     text=f'Sorry, that script is unavailable. See /all for your script.')
             return
 
         user.state = f'using_{program_id}'
@@ -79,21 +76,24 @@ def message_handler(update, context, user):
 
 @get_user()
 def config_cmd(update, context, user):
+    if update.message.from_user.id not in config:
+        context.bot.send_message(chat_id=update.effective_chat.id,
+                                 text='Sorry, you cannot upload configs.')
+        return
     user.state = 'upload_config'
     session.commit()
     context.bot.send_message(chat_id=update.effective_chat.id,
                              text='Upload config')
-    pass
 
 
 @get_user()
 def all_programs_cmd(update, context, user):
-    programs = session.query(Program).filter_by(creator_id=user.id).all()
+    programs = session.query(Program).all()
     text = ''
     for program in programs:
         text += f'/r_{program.id} | {program.name}\n'
     if not text:
-        text = "You don't have any script."
+        text = "No scripts yet."
     context.bot.send_message(chat_id=update.effective_chat.id,
                              text=text)
 

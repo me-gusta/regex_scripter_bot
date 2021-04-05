@@ -17,5 +17,6 @@ services:
       context: .
     environment:
       - TOKEN=
+      - ADMINS=
     depends_on:
       - db
